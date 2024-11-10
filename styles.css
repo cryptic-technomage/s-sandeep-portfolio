@@ -756,6 +756,11 @@ footer span a:hover {
         width: 100%;
         margin-bottom: 35px;
     }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
 }
 
 @media (max-width: 690px) {
@@ -775,7 +780,7 @@ footer span a:hover {
         font-size: 20px;
     }
 
-    .services-section .services-content .card 
+    .services-section .services-content .card
    {
         width: 100%;
     }
