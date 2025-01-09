@@ -22,6 +22,21 @@ html {
     --border-radius-circle: 50%;
 
     --site-max-width: 1300px;
+
+    /* Projects section variables */
+    --hue: 358;
+    --body-color: hsl(var(--hue), 100%, 1%);
+    --white-color: hsl(0, 0%, 98%);
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --container-color: hsl(var(--hue), 2%, 10%);
+    --text-color: hsl(var(--hue), 2%, 66%);
+    --black-color: hsl(0, 0%, 1%);
+}
+
+/* Common Styling */
+section {
+    padding: 100px 0 ;
 }
 
 /* Problem is here  */
@@ -154,11 +169,7 @@ html {
 
 /* About section styling */
 
-section {
-    padding: 100px 0;
-}
-
-.about-section , .services-section, .skills-section, .teams-section, .contact-section, footer{
+.about-section , .services-section, .skills-section, .teams-section, .contact-section, footer, .projects{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -168,7 +179,7 @@ section .title {
     font-size: 40px;
     margin-bottom: 60px;
     padding-bottom: 20px;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium) !important;
     text-align: center;
 }
 
@@ -396,7 +407,122 @@ section .title::after {
     width: 65%;
 }
 
+/* Project section styling */
+#projects {
+    background-color: var(--body-color);
+    color: var(--white-color);
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: var(--font-weight-semibold);
+  }
+  
+.projects__name {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: .5rem;
+}
+
+.projects__img {
+    transition: transform .4s;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1168px;
+    margin-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .section {
+    padding-block: 100px 100px;
+  }
+  .section__title {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .projects__card {
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+  .projects__image {
+    display: block;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .projects__description {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .projects_skill {
+    width: 1rem;
+    transition: transform .4s;
+  }
+
+  .projects__skill:hover {
+    transform: translateY(-.25rem);
+  }
+
+  .projects__skills {
+    width:max-content;
+    height: 34px;
+    background-color: var(--black-color);
+    padding-inline:  .75rem;
+    display: flex;
+    align-items: center;
+    column-gap: .75rem;
+    border-radius: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .projects__button {
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    transition: color .4s;
+  }
+
+  .projects__button i {
+    font-size: 1.25rem;
+  }
+
+  .projects__button span {
+    font-weight: var(--font-weight-medium);
+  }
+
+  
+.projects__button:hover {
+    color: var(--text-color);
+  }
+
+  .projects__card:hover .projects__img {
+    transform: scale(1.2);
+  }
+  .projects .title::after {
+content: "What I Built";
+background: var(--body-color);
+  }
+  .projects .title::before {
+    background: #fff;
+  }
+
 /* teams section styling */
+.teams-section {
+    display: none;
+}
 
 .teams-section .title::after {
     content: "who with me";
@@ -596,7 +722,7 @@ footer {
     color: #fff;
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: 0px !important;
 }
 
 footer .icons {
@@ -796,3 +922,30 @@ footer span a:hover {
         font-size:27px;
     }
 }
+
+/* Project section media queries */
+
+@media screen and (min-width: 540px) {
+    .projects__container {
+      grid-template-columns: 380px;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .projects__container {
+      grid-template-columns: repeat(2, 350px);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .projects__container {
+      grid-template-columns: repeat(3, 368px);
+      gap: 2rem;
+      max-width: 100%;
+    }
+  
+    .projects__card {
+      padding-bottom: 2rem;
+    }
+  }

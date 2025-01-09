@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
+    <!-- Font Awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carousel cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Remixicons cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Scroll up button -->
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
+
+    <!-- Navbar section -->
     <nav class="nav-bar">
         <div class="max-width">
             <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
@@ -29,6 +36,7 @@
         </div>
     </nav>
 
+    <!-- Hero section -->
     <section class="hero-section" id="home">
         <div class="max-width">
             <div class="hero-content">
@@ -40,6 +48,7 @@
         </div>
     </section>
 
+    <!-- About section -->
     <section class="about-section" id="about">
         <div class="max-width">
             <h2 class="title">About me</h2>
@@ -56,6 +65,7 @@
         </div>
     </section>
 
+    <!-- Services section -->
     <section class="services-section" id="services">
         <div class="max-width">
             <h2 class="title">My services</h2>
@@ -87,7 +97,7 @@
         </div>
     </section>
 
-
+    <!-- Skills Section -->
     <section class="skills-section" id="skills">
         <div class="max-width">
             <h2 class="title">My skills</h2>
@@ -143,7 +153,70 @@
         </div>
     </section>
 
+    <!-- Projects section -->
+    <section class="projects section" id="projects">
+        <h2 class="section__title title">Recent Projects</h2>
+        <div class="projects__container container grid">
+           <article class="projects__card">
+              <a href="#" target="_blank" class="projects__image">
+                 <img src="images/coffee-web-pic3.png" alt="image" class="projects__img">
+              </a>
 
+              <div class="projects_data">
+                 <h3 class="projects__name">Coffee Website</h3>
+                 <p class="projects__description">An Beautiful Coffee Website build using html, css and javascript</p>
+
+                    <div class="projects__skills">
+                       <img src="images/skills-html.svg" alt="image" class="projects_skill">
+                       <img src="images/skills-css.svg" alt="image" class="projects_skill">
+                       <img src="images/skills-javascript.svg" alt="image" class="projects_skill">
+                    </div>
+
+                    <a href="https://best-coffee-in.netlify.app" target="_blank" class="projects__button"><i class="ri-link"></i><span>Visit Projects</span></a>
+              </div> 
+           </article>
+
+           <article class="projects__card">
+              <a href="#" target="_blank" class="projects__image">
+                 <img src="images/tic-tac-toe-pic3.png" alt="image" class="projects__img">
+              </a>
+
+              <div class="projects_data">
+                 <h3 class="projects__name">Tic-Tac-Toe Game</h3>
+                 <p class="projects__description">Rebuilding the Classic Game Tic-Tac-Toe in using web technologies.</p>
+
+                    <div class="projects__skills">
+                       <img src="images/skills-html.svg" alt="image" class="projects_skill">
+                       <img src="images/skills-css.svg" alt="image" class="projects_skill">
+                       <img src="images/skills-javascript.svg" alt="image" class="projects_skill">
+                    </div>
+
+                    <a href="https://tic-tac-toe-single-player.netlify.app" target="_blank" class="projects__button"><i class="ri-link"></i><span>Visit Projects</span></a>
+              </div> 
+           </article>
+           <article class="projects__card">
+              <a href="#" target="_blank" class="projects__image">
+                 <img src="images/hangman-pic3.png" alt="image" class="projects__img">
+              </a>
+
+              <div class="projects_data">
+                 <h3 class="projects__name">Hangman Game</h3>
+                 <p class="projects__description">Classic Hangman Game build using html, css and javascript for game logic.</p>
+
+                    <div class="projects__skills">
+                       <img src="images/skills-html.svg" alt="image" class="projects_skill">
+                       <img src="images/skills-css.svg" alt="image" class="projects_skill">
+                       <img src="images/skills-javascript.svg" alt="image" class="projects_skill">
+                    </div>
+
+                    <a href="https://hangman-game-scratch.netlify.app" target="_blank" class="projects__button"><i class="ri-link"></i><span>Visit Projects</span></a>
+              </div> 
+           </article>
+        
+        </div>
+     </section>
+
+    <!-- Teams section -->
     <section class="teams-section" id="teams">
         <div class="max-width">
             <h2 class="title">My team</h2>
@@ -176,6 +249,7 @@
         </div>
     </section>
 
+    <!-- Contact section -->
     <section class="contact-section" id="contact"> 
         <div class="max-width">
             <h2 class="title">Contact me</h2>
