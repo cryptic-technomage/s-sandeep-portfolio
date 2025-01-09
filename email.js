@@ -9,7 +9,7 @@ const sendEmail = (e) => {
         contactMessage.style.opacity = 1;
     }, 10);
     // serviceid , templateid, #form, publickey
-    emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, '#contact-form', process.env.PUBLIC_KEY).then(()=> {
+    emailjs.sendForm("service_qti4iqi", "template_0qr5s3t", '#contact-form', "4lSbxOl6-4RY0uuix").then(()=> {
         // show message sent to user
         contactMessage.style.opacity = 0;
         setTimeout(() => {
