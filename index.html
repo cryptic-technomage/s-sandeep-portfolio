@@ -283,25 +283,26 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form action="#" id="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" name="from_name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" name="user_email" required>
                             </div>
                             
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" placeholder="Subject" name="user_subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10"   placeholder="describe project" required></textarea>
+                            <textarea cols="30" rows="10"   placeholder="describe project" name="user_message" required></textarea>
                         </div>
                         <div class="button">
                             <button type="submit">Send message</button>
                         </div>
+                        <p class="contact-message" id="contact-message"></p>
                     </form>
                 </div>
             </div>
@@ -330,14 +331,24 @@
 
 
 
-<script
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"></script>
+
+  <!-- Typing animation cdn link -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+<!-- JQuery core cdn link -->
+<script
+src="https://code.jquery.com/jquery-3.7.1.min.js"
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"></script>
+<!-- JQuery waypoint plugin cdn link -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Fontawesome cdn link -->
   <script src="https://kit.fontawesome.com/9ac4db8b6c.js" crossorigin="anonymous"></script>
+  <!-- Carousel cdn link -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Email js cdn link -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Custom js links -->
+  <script src="email.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
