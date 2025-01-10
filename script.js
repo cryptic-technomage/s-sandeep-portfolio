@@ -1,8 +1,9 @@
 $(document).ready(function() {
+    // Scroll handling and sticky nav
     $(window).scroll(function() {
         if(this.scrollY > 20) {
             $(".nav-bar").addClass("sticky");
-        }else {
+        } else {
             $(".nav-bar").removeClass("sticky");
         }
 
@@ -12,32 +13,35 @@ $(document).ready(function() {
             $('.scroll-up-btn').removeClass('show');
         }
     });
-    // slide-up script
+
+    // Scroll-up button click
     $('.scroll-up-btn').click(function() {
         $('html').animate({scrollTop: 0});
-    })
+    });
 
-    // typing animation script
+    // Typing animation script for .typing
     var typed = new Typed(".typing", {
-        strings: ["Web Developer","Designer", "Freelancer", "Blogger"],
+        strings: ["Web Developer", "Designer", "Freelancer", "Blogger"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
-    })
+    });
 
-    var typed = new Typed(".typing-2", {
+    // Typing animation script for .typing-2
+    var typed2 = new Typed(".typing-2", {
         strings: ["Web Developer", "Freelancer", "Blogger"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
-    })
+    });
 
-    // Toggle menu script
+    // Toggle menu
     $('.menu-btn').click(function() {
         $('.nav-bar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
 
+    // Owl carousel initialization
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
@@ -58,4 +62,38 @@ $(document).ready(function() {
             }
         }
     });
-})
+
+    // Your existing email form handling (send email)
+    const emailForm = $('#contact-form');
+    const contactMessage = $('#contact-message');
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        contactMessage.css('opacity', 0).text('Sending Message... ✉️');
+        contactMessage[0].offsetHeight; // Trigger reflow
+        setTimeout(() => {
+            contactMessage.css('opacity', 1);
+        }, 10);
+
+        // Send email via EmailJS
+        emailjs.sendForm('service_qti4iqi', 'template_0qr5s3t', '#contact-form', '4lSbxOl6-4RY0uuix')
+            .then(() => {
+                contactMessage.css('opacity', 0);
+                setTimeout(() => {
+                    contactMessage.text('Message Sent Successfully ✅').css('opacity', 1);
+                }, 500);
+
+                setTimeout(() => {
+                    contactMessage.css('opacity', 0);
+                }, 4000);
+
+                setTimeout(() => {
+                    contactMessage.text('');
+                }, 5000);
+
+                emailForm[0].reset();
+            });
+    };
+
+    emailForm.on('submit', sendEmail);
+});
