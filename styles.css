@@ -174,6 +174,7 @@ section {
 .skills-section,
 .teams-section,
 .contact-section,
+.certificate-section,
 footer,
 .projects {
   font-family: 'Poppins', sans-serif;
@@ -524,6 +525,38 @@ section .title::after {
 }
 .projects .title::before {
   background: #fff;
+}
+
+
+.swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.certificate-section .title::after {
+  content: "What I Learned";
+}
+
+.swiper-pagination-bullet-active  {
+  background-color: var(--primary-color);
+}
+
+.swiper-button-prev {
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-left: 20px;
+}
+
+.swiper-button-next {
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-right: 20px;
+}
+
+.swiper-container {
+  overflow: hidden;
 }
 
 /* teams section styling */
@@ -888,6 +921,12 @@ footer span a:hover {
     flex-direction: column;
     align-items: center;
     gap: 25px;
+  }
+  .certificate-section .card-img {
+    max-width: 400px;
+  }
+  .certificate-section .swiper-slide {
+    width: 100%;
   }
 }
 

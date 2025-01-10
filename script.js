@@ -63,6 +63,34 @@ $(document).ready(function() {
         }
     });
 
+    // Swiper for certificates
+    new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        centeredSlides: true,
+        slidesPerView: 1, // Adjust as necessary for the number of slides per view
+        spaceBetween: 20, // Adjust space between slides
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 1
+            },
+            1024: {
+                slidesPerView: 1,
+            }
+        }
+    });
+
     // Your existing email form handling (send email)
     const emailForm = $('#contact-form');
     const contactMessage = $('#contact-message');
