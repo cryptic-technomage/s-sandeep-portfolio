@@ -71,6 +71,9 @@ $(document).ready(function() {
             clickable: true,
             dynamicBullets: true,
         },
+        autoplay: {
+    delay: 3000,
+  },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -99,6 +102,9 @@ $(document).ready(function() {
             clickable: true,
             dynamicBullets: true,
         },
+        autoplay: {
+    delay: 4000,
+  },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

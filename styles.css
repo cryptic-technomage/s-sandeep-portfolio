@@ -992,13 +992,14 @@ footer span a:hover {
     align-items: center;
     gap: 25px;
   }
+  /* certificate section styling mid size screen */
   .certificate-section .card-img {
     max-width: 400px;
   }
   .certificate-section .swiper-slide {
     width: 100%;
   }
-
+  /* achievements section styling */
   .achievement-section .prize-img {
     max-width: 100%;
   }
@@ -1048,6 +1049,44 @@ footer span a:hover {
   .services-section .services-content .card {
     width: 100%;
   }
+  /* Certificate section for mobile */
+  .certificate-section .card-img {
+    max-width: 100%; /* Ensure the image fits the screen */
+  }
+  .certificate-section .swiper-slide {
+    width: 100%; /* Keep the swiper slide full width */
+  }
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+
+  /* Achievements section for mobile */
+  .achievement-section .prize-img {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .achievement-section .card-link {
+    width: 100%; 
+    margin: 0 auto; 
+  }
+
+  .achievement-section .prize-title {
+    font-size: 16px; 
+    padding: 8px 0 6px; 
+  }
+
+  .achievement-section .prize-description {
+    font-size: 14px; 
+    padding-bottom: 10px; 
+  }
+
+  .achievement-section .prize-btn {
+    width: 100%; 
+    padding: 10px;
+    font-size: 14px; 
+  }
+
 }
 
 @media (max-width: 500px) {
