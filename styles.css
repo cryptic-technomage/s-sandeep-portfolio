@@ -109,7 +109,7 @@ section {
 /* Hero section styling */
 .hero-section {
   display: flex;
-  background: url('images/banner.png') no-repeat center;
+  background: url('images/bg_img/banner.png') no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
@@ -175,6 +175,7 @@ section {
 .teams-section,
 .contact-section,
 .certificate-section,
+.achievement-section,
 footer,
 .projects {
   font-family: 'Poppins', sans-serif;
@@ -280,7 +281,8 @@ section .title::after {
   background: #111;
 }
 .services-section .title::before,
-.teams-section .title::before {
+.teams-section .title::before ,
+.achievement-section::before{
   background: #fff;
 }
 .services-section,
@@ -346,9 +348,10 @@ section .title::after {
   text-align: justify;
 }
 
-.skills-section .skills-content .left a {
+.skills-section .skills-content .left a,.achievement-section .prize-btn {
   display: inline-block;
   background: var(--primary-color);
+  cursor: pointer;
   color: #fff;
   font-size: 18px;
   padding: 8px 16px;
@@ -359,7 +362,7 @@ section .title::after {
   font-weight: var(--font-weight-medium);
 }
 
-.skills-section .skills-content .left a:hover {
+.skills-section .skills-content .left a:hover, .achievement-section .prize-btn:hover{
   color: var(--primary-color);
   background: none;
 }
@@ -527,7 +530,7 @@ section .title::after {
   background: #fff;
 }
 
-
+/* Certificate section styling */
 .swiper-slide {
   width: 100%;
   display: flex;
@@ -542,7 +545,12 @@ section .title::after {
 .swiper-pagination-bullet-active  {
   background-color: var(--primary-color);
 }
-
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background: var(--primary-color);
+}
 .swiper-button-prev {
   font-weight: var(--font-weight-bold);
   color: var(--primary-color);
@@ -559,6 +567,68 @@ section .title::after {
   overflow: hidden;
 }
 
+/* Achievements section */
+.achievement-section .card-link{
+max-width: 650px;
+display: flex;
+background: var(--container-color);
+border-radius: 1.5rem;
+justify-content: center;
+flex-direction: column;
+padding: 1.5rem;
+transition: transform 0.4s;
+}
+
+.achievement-section .card-link:hover {
+  transform: scale(1.02);
+}
+.achievement-section .prize-img {
+  border-radius: 1.5rem;
+  max-width: 600px;
+  object-fit: cover;
+}
+.achievement-section {
+  background: var(--body-color);
+  text-align: center;
+}
+.achievement-section .title::after {
+  content: 'What I Achieved';
+  background: var(--body-color);
+}
+.achievement-section .title::before {
+  background: #fff;
+}
+.achievement-section .title {
+  color: #fff;
+}
+
+.achievement-section .card-wrapper {
+  padding: 20px 0px;
+}
+
+.achievement-section .prize-title {
+  font-size: 26px;
+  font-weight: var(--font-weight-medium);
+  color: var(--white-color);
+  padding: 18px 0 8px;
+}
+.achievement-section .prize-description {
+  font-size: 18px;
+  color: var(--text-color);
+  padding-bottom: 20px;
+}
+
+.achievement-section .prize-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.achievement-section .swiper-button-prev {
+  margin-left: 25px;
+}
+.achievement-section .swiper-button-next {
+  margin-right: 25px;
+}
 /* teams section styling */
 .teams-section {
   display: none;
@@ -927,6 +997,35 @@ footer span a:hover {
   }
   .certificate-section .swiper-slide {
     width: 100%;
+  }
+
+  .achievement-section .prize-img {
+    max-width: 100%;
+  }
+  .achievement-section .card-link {
+    width: 70%;
+  }
+
+  .achievement-section .prize-title {
+    font-size: 18px;
+    padding: 10px 0 8px;
+  }
+
+  .achievement-section .prize-description {
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+
+  .achievement-section .swiper-button-prev {
+    margin-left: 0;
+  }
+  .achievement-section .swiper-button-next {
+    margin-right: 0;
+  }
+
+  .achievement-section .prize-btn {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
