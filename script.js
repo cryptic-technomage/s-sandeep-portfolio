@@ -64,7 +64,35 @@ $(document).ready(function() {
     });
 
     // Swiper for certificates
-    new Swiper('.swiper', {
+    new Swiper('.cert-swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        centeredSlides: true,
+        slidesPerView: 1, // Adjust as necessary for the number of slides per view
+        spaceBetween: 20, // Adjust space between slides
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 1
+            },
+            1024: {
+                slidesPerView: 1,
+            }
+        }
+    });
+
+    // Swiper for achievement
+    new Swiper('.ach-swiper', {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
