@@ -116,6 +116,44 @@ section {
   font-family: 'Ubuntu', sans-serif;
 }
 
+.hero-section .hero-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .max-width {
+  display: flex;
+  align-items: center;
+  flex-direction: column ;
+}
+
+.hero-section .social-btn {
+  margin-left: 1.2rem;
+  margin-top: 18px;
+}
+
+.hero-section .social-btn a {
+  display: inline-flex;
+  padding: .8rem;
+  border: .2rem solid var(--primary-color);
+  border-radius: 50%;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin: 0 .6rem;
+  transition: .5s;
+}
+
+.hero-section .social-btn a:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+  box-shadow: 0 0 1rem var(--primary-color);
+}
+
+.hero-img{
+    display: none;
+}
+
+
 /* The problem is here */
 .hero-section .max-width {
   margin: auto 0 auto 40px;
@@ -141,7 +179,7 @@ section {
   font-weight: var(--font-weight-medium);
 }
 
-.hero-content a {
+.hero-content a.hire-btn {
   display: inline-block;
   background: var(--primary-color);
   color: #fff;
@@ -149,11 +187,14 @@ section {
   padding: 12px 36px;
   margin-top: 20px;
   border-radius: 6px;
+  border-radius: 4rem;
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
+  box-shadow: 0 0 1rem var(--primary-color);
+  transition: 0.5s;
 }
 
-.hero-content a:hover {
+.hero-content a.hire-btn:hover {
   color: var(--primary-color);
   background: none;
 }
@@ -264,6 +305,8 @@ section .title::after {
   padding: 10px 30px;
   margin-top: 20px;
   border-radius: 6px;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--primary-color);
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
   font-weight: var(--font-weight-medium);
@@ -357,6 +400,8 @@ section .title::after {
   padding: 8px 16px;
   margin-top: 20px;
   border-radius: 6px;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.5rem var(--primary-color);
   border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
   font-weight: var(--font-weight-medium);
@@ -621,6 +666,8 @@ transition: transform 0.4s;
 .achievement-section .prize-btn {
   width: 50%;
   margin: 0 auto;
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--primary-color);
 }
 
 .achievement-section .swiper-button-prev {
@@ -803,6 +850,8 @@ transition: transform 0.4s;
   font-size: 20px;
   font-weight: var(--font-weight-normal);
   border-radius: 6px;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.5rem var(--primary-color);
   cursor: pointer;
   transition: all 0.6s ease;
 }
@@ -1077,6 +1126,32 @@ footer span a:hover {
     padding: 10px;
   }
 
+  /* Hero Section styling */
+  .hero-img {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+
+}
+.hero-img .img-item {
+  width: 250px;
+  height: 250px;
+}
+.hero-img .img-item img {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 70px;
+}
+
+}
+
+@media (max-width: 550px) {
+  .hero-img .img-item img {
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1087,8 +1162,80 @@ footer span a:hover {
   .hero-section .hero-content .text-3 {
     font-size: 27px;
   }
+  /* hero section styling */
+  .hero-section .hero-buttons {
+    flex-direction: column-reverse;
+   
+  }
+  .hero-img .img-item {
+    width: 200px;
+    height: 200px;
+  }
+
+
+
+  .hero-section .max-width{
+    margin-left: 65px;
+  }
+
 }
 
+@media (max-width: 450px) {
+  .hero-section .max-width{
+    margin-left: 0px;
+  }
+  .hero-content a.hire-btn {
+    padding: 11px 33px;
+    margin-left: 35px;
+    margin-top: 25px;
+
+  }
+
+  .hero-section .hero-content .text-1 {
+    font-size: 20px; 
+  }
+
+  .hero-section .hero-content .text-2 {
+    font-size: 50px; 
+    margin-left: 0; 
+  }
+
+  .hero-section .hero-content .text-3 {
+    font-size: 24px; 
+    margin: 8px 0; 
+  }
+
+  section .title {
+    font-size: 38px;
+  }
+  section .title::after {
+    font-size: 18px;
+  }
+}
+@media (max-width: 350px) {
+  section .title {
+    font-size: 28px;
+  }
+  section .title::after {
+    font-size: 16px;
+  }
+
+  .hero-img .img-item {
+    width: 120px; 
+    height: 120px;
+  }
+  .hero-section .social-btn a {
+    font-size: 0.8rem; 
+    padding: 0.7rem; 
+    border: 0.15rem solid var(--primary-color); 
+  }
+
+  .hero-section .hero-content .text-3 {
+    font-size: 22px; 
+    margin: 6px 0; 
+  }
+
+}
 /* Project section media queries */
 
 @media screen and (min-width: 540px) {
