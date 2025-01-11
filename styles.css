@@ -1071,20 +1071,10 @@ footer span a:hover {
     margin: 0 auto; 
   }
 
-  .achievement-section .prize-title {
-    font-size: 16px; 
-    padding: 8px 0 6px; 
-  }
-
-  .achievement-section .prize-description {
-    font-size: 14px; 
-    padding-bottom: 10px; 
-  }
 
   .achievement-section .prize-btn {
     width: 100%; 
     padding: 10px;
-    font-size: 14px; 
   }
 
 }
