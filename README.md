@@ -1,7 +1,7 @@
 # Sandeep Portfolio ✨
 ## Responsive Portfolio website with various sections for prjects, skills, achievements and more..
 
-<br><br>
+<br>
 ## Demo:
 [![MasterHead](https://raw.githubusercontent.com/cryptic-technomage/s-sandeep-portfolio/master/demo-img.gif)](https://sage-beignet-3c92f1.netlify.app)
 
