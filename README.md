@@ -3,12 +3,12 @@
 
 <br>
 
-## Demo: 🚀
+## 🚀 Demo: 
 [![MasterHead](https://raw.githubusercontent.com/cryptic-technomage/s-sandeep-portfolio/master/demo-img.gif)](https://sage-beignet-3c92f1.netlify.app)
 
 <br>
 
-## Table of Contents 📚
+## 📚 Table of Contents:
 - [Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
